@@ -1,32 +1,4 @@
 public class ReverseInteger {
-//	public static int reverse(int x) {
-//		if (x == 0) {
-//			return 0;
-//		}
-//
-//		String num = x + "";
-//		String result = "";
-//
-//		boolean isNegative = false;
-//
-//		for (int i = num.length() - 1; i >= 0; i--) {
-//
-//			if (num.charAt(i) == '-') {
-//				isNegative = true;
-//			} else {
-//				result += num.charAt(i);
-//			}
-//		}
-//
-//		long longResult = isNegative ? Long.parseLong("-" + result) : Long.parseLong(result);
-//
-//		if (longResult > Integer.MAX_VALUE || longResult < Integer.MIN_VALUE) {
-//			return 0;
-//		} else {
-//			return isNegative ? Integer.parseInt("-" + result) : Integer.parseInt(result);
-//		}
-//	}
-
 	public static int reverse(int x) {
 		if (x == 0) {
 			return 0;
