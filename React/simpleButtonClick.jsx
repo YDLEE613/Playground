@@ -17,6 +17,19 @@ function Display(props){
   );
 }
 
+
+// timer
+const timer= ()=>{
+  ReactDOM.render(
+    React.createElement(
+      'div', 
+      null, 
+      React.createElement('pre', null, (new Date).toLocaleTimeString()),
+    ),
+    document.getElementById('mountNode2'),
+  );
+}
+
 // App
 function App(){
   const[counter, setCounter] = useState(2);
@@ -28,6 +41,7 @@ function App(){
       <Button onClickFunction={incrementCounter} increment={10}/>
       <Button onClickFunction={incrementCounter} increment={100}/>
       <Display message={counter}/>   
+      <timer/>
    </div>
   );
 }
@@ -36,3 +50,5 @@ ReactDOM.render(
   <App/>,
   document.getElementById('mountNode'),
 );
+
+setInterval(timer, 1000);
